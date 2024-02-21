@@ -1,0 +1,43 @@
+li {
+    list-style: none;
+}
+
+li a {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+li a :hover {
+    transition-duration: 2s;
+}
+
+.getfont {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.navbar-toggler-icon {
+    background-color: rgba(43, 170, 243, 0.521) !important;
+    border-radius: 20px;
+
+}
+
+.getimage-h {
+    margin-top: -40px;
+    
+}
+.get-style{
+    border-radius: 20px;
+    background: linear-gradient(45deg, #a6cbd3d0, #8abce4);
+}
+.navbar {
+
+    background: linear-gradient(to left, #c9dae4, #fdfeffea);
+    animation-name: fade-in-right;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+}

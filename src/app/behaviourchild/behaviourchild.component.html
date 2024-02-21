@@ -1,0 +1,10 @@
+<div>
+    <div class="shadow py-5" style="cursor: pointer;" *ngFor="let useritem of userArray let i=index"  (click)="getUser(useritem,i)">
+        <p>{{useritem.firstname}}</p>
+        <p>{{useritem.lastname}}</p>
+        <p>{{useritem.age}}</p>
+        <p>{{useritem.email}}</p>
+        <button (click)="del(i)">delete</button>
+        <!-- <button  (click)="getUser(useritem,i)">Edit</button> -->
+    </div>
+</div>

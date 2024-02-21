@@ -1,0 +1,107 @@
+<form action="" #reactiveform="ngForm" [formGroup]="formOne" class="mt-5 py-5">
+    <div class="col-12 col-lg-6 mx-auto px-3 pb-2 mt-3 shadow">
+      <h5 class="text-center text-success">SIGN UP (REACTIVE FORM)</h5>
+      <input
+        type="text"
+        class="form-control my-3"
+        name="firstname"
+        formControlName="firstname"
+        placeholder="First Name"
+        [class.is-valid]="formOne.get('firstname')?.valid 
+        && formOne.get('firstname')?.dirty"        
+        [class.is-invalid]="formOne.get('firstname')?.invalid 
+        && formOne.get('firstname')?.dirty">
+      <div class="text-danger" *ngIf="formOne.get('firstname')?.invalid && formOne.get('firstname')?.touched">
+        <span *ngIf="formOne.get('firstname')?.errors?.['required']">
+        
+            Minimum length required is 10
+     </span>
+      </div>
+      <input
+        type="text"
+        class="form-control my-3"
+        name="lastname"
+        formControlName="lastname"
+        placeholder="Last Name"
+        [class.is-valid]="formOne.get('lastname')?.valid 
+        && formOne.get('lastname')?.dirty"        
+        [class.is-invalid]="formOne.get('lastname')?.invalid 
+        && formOne.get('lastname')?.dirty"
+      />
+      <div class="text-danger" *ngIf="formOne.get('lastname')?.invalid && formOne.get('lastname')?.touched">
+        <span *ngIf="formOne.get('lastname')?.errors?.['required']">
+        
+            lastname is required
+        </span>
+      </div>
+      <input
+        type="text"
+        class="form-control my-3"
+        name="age"
+        formControlName="age"
+        placeholder="Age"
+        [class.is-valid]="formOne.get('age')?.valid 
+        && formOne.get('age')?.dirty"        
+        [class.is-invalid]="formOne.get('age')?.invalid 
+        && formOne.get('age')?.dirty"
+      />
+      <div class="text-danger" *ngIf="formOne.get('age')?.invalid && formOne.get('age')?.touched">
+        <span *ngIf="formOne.get('age')?.errors?.['required']">
+        
+            age is required
+        </span>
+      </div>
+      <input
+        type="text"
+        class="form-control my-3"
+        name="email"
+        formControlName="email"
+        placeholder="Email"
+        [class.is-valid]="formOne.get('email')?.valid 
+        && formOne.get('email')?.dirty"        
+        [class.is-invalid]="formOne.get('email')?.invalid 
+        && formOne.get('email')?.dirty"
+      />
+      <div class="text-danger" *ngIf="formOne.get('email')?.invalid && formOne.get('email')?.touched">
+        <span *ngIf="formOne.get('email')?.errors?.['required']">
+        
+            email is required
+        </span>
+      </div>
+      <input
+        type="text"
+        class="form-control my-3"
+        name="password"
+        formControlName="password"
+        placeholder="Password"
+        [class.is-valid]="formOne.get('password')?.valid 
+        && formOne.get('password')?.dirty"        
+        [class.is-invalid]="formOne.get('password')?.invalid 
+        && formOne.get('password')?.dirty"
+      />
+      <div class="text-danger" *ngIf="formOne.get('password')?.invalid && formOne.get('password')?.touched">
+        <span *ngIf="formOne.get('password')?.errors?.['required']">
+            Mininmun and maximum length 6
+        </span>
+      </div>
+      <input
+        type="checkbox"
+        formControlName="acceptTerms"
+        name="acceptTerms"
+        required
+      />
+      <div class="text-dark">
+        <span>Accept all terms</span>
+      </div>
+      
+      <button
+        class="btn btn-primary w-100"
+        (click)="submitForm()"
+        type="submit"
+        [disabled]="reactiveform.invalid"
+      >
+        Submit reactive form
+      </button>
+    </div>
+  </form>
+  

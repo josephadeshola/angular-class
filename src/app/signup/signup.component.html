@@ -1,0 +1,15 @@
+<div class="container mt-5 py-5">
+    <div class="row">
+        <div class="col-md-6 col-12 mx-auto shadow px-3 py-3">
+            <div class="{{style}}">{{message}}</div>
+            <h3 class="text-center text-primary">SIGN-Up Page</h3>
+            <input type="text" [(ngModel)]="firstname" placeholder="firstname" class="my-2 form-control">
+            <input type="text" [(ngModel)]="lastname" placeholder="lastname" class="my-2 form-control">
+            <input type="text" [(ngModel)]="age" placeholder="age" class="my-2 form-control">
+            <input type="text" [(ngModel)]="address" placeholder="address" class="my-2 form-control">
+            <input type="text" [(ngModel)]="email" placeholder="email" class="my-2 form-control">
+            <input type="text" [(ngModel)]="password" placeholder="password" class="my-2 form-control">
+            <button class="btn btn-primary w-100 py-2 " (click)="createUser()">Sign up</button>
+        </div>
+    </div>
+</div>

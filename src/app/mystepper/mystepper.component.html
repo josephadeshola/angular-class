@@ -1,0 +1,200 @@
+
+<div class="container">
+  <div class="row">
+    <form
+      action=""
+      #reactiveform="ngForm"
+      [formGroup]="formOne"
+      class="mt-5 py-5"
+    >
+      <div data-aos="fade-left" *ngIf="showFirstForm" class="shadow  mx-auto px-3 py-5 pb-5  col-md-6">
+        <p class="fw-bold fs-1 pb-3">User Details</p>
+        <input
+          type="text"
+          class="form-control mt-2 border-none py-2 mt-3 bg-light shadow-sm"
+          formControlName="firstname"
+          placeholder="FirstName"
+        />
+        <input
+          type="text"
+          class="form-control mt-2 border-none py-2 mt-3 bg-light shadow-sm"
+          formControlName="lastname"
+          placeholder="LastName"
+        />
+        <input
+          type="text"
+          class="form-control mt-2 border-none py-2 mt-3 bg-light shadow-sm"
+          formControlName="email"
+          placeholder="Email"
+        />
+        <input
+          type="text"
+          class="form-control mt-2 border-none py-2 mt-3 bg-light shadow-sm"
+          formControlName="password"
+          placeholder="Password"
+        />
+        <button
+          (click)="showSecondForms()"
+          class="btn btn-primary mt-2 border-none bg-primary text-light  float-end"
+        >
+          Next
+        </button>
+        
+      </div>
+   
+    <div data-aos="fade-left" *ngIf="!showFirstForm" class="shadow mx-auto px-3 form-transform py-5 col-md-6">
+        <p class="fw-bold fs-1 pb-3">Personal Details</p>
+      <input
+        type="text"
+        class="form-control mt-2 shadow-sm"
+        placeholder="UserName"
+        formControlName="username"
+      />
+      <input
+        type="text"
+        class="form-control mt-2 shadow-sm"
+        placeholder="PhoneNumber"
+        formControlName="phone"
+      />
+      <input
+        type="text"
+        class="form-control mt-2 shadow-sm"
+        placeholder="Gender"
+        formControlName="gender"
+      />
+      <input
+        type="date"
+        class="form-control mt-2 shadow-sm"
+        placeholder="date"
+        formControlName="date"
+      />
+      <div class="d-flex justify-content-between">
+
+          <button
+          (click)="showBackForm()"
+          class="btn btn-primary mt-2 float-end"
+          >
+          Back
+        </button>
+          <button (click)="showSecondForm()" class="btn btn-primary mt-2">Submit</button>
+    </div>
+    </div>
+</form>
+</div>
+</div>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div class="container mt-5 py-5">
+    <header>Login Form</header>
+    <div class="progress-bar">
+        <div class="step">
+            <p>Name</p>
+            <div class="bullet">
+                <span>1</span>
+            </div>
+            <div class="check"></div>
+        </div>
+        <div class="step">
+            <p>Contact</p>
+            <div class="bullet">
+                <span>1</span>
+            </div>
+            <div class="check"></div>
+        </div>
+        <div class="step">
+            <p>Birth</p>
+            <div class="bullet">
+                <span>1</span>
+            </div>
+            <div class="check"></div>
+        </div>
+        <div class="step">
+            <p>Name</p>
+            <div class="bullet">
+                <span>1</span>
+            </div>
+            <div class="check"></div>
+        </div>
+    </div>
+    <div class="form-outer">
+        <form action="">
+            <div class="page">
+                <div class="title">Basic Info:</div>
+                <div class="field">
+                    <div class="label">First Name</div>
+                    <input type="text">
+                </div>
+                <div class="field">
+                    <div class="label">Last Name</div>
+                    <input type="text">
+                </div>
+                <div class="field">
+                    <button>Next</button>
+                </div>
+            </div>
+
+            <div class="page">
+                <div class="title">Contact Info:</div>
+                <div class="field">
+                    <div class="label">Email Address</div>
+                    <input type="text">
+                </div>
+                <div class="field ">
+                    <div class="label">Phone Number</div>
+                    <input type="number">
+                </div>
+                <div class="field btns">
+                    <button class="prev-1 prev">Prev</button>
+                    <button class="next-1 next">Next</button>
+                </div>
+            </div>
+
+            <div class="page">
+                <div class="title">Date of birth:</div>
+                <div class="field">
+                    <div class="label">Data</div>
+                    <input type="text">
+                </div>
+                <div class="field ">
+                    <div class="label">Gender</div>
+                    <select name="" id="">
+                        <option value="">Male</option>
+                        <option value="">Female</option>
+                    </select>
+                </div>
+                <div class="field btns">
+                    <button class="prev-2 prev">Prev</button>
+                    <button class="next-2 next">Next</button>
+                </div>
+            </div>
+
+            <div class="page">
+                <div class="title">Login Details</div>
+                <div class="field">
+                    <div class="label">Email</div>
+                    <input type="text">
+                </div>
+                <div class="field ">
+                    <div class="label">passowrd</div>
+                    <input type="text">
+
+                </div>
+                <div class="field btns">
+                    <button class="prev-3 prev">Prev</button>
+                    <button class="next-3 next">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html> -->

@@ -1,0 +1,76 @@
+<form action="" #fgroup="ngForm" class="mt-5 py-5">
+  <div class="col-12 col-lg-6 mx-auto px-3 pb-2 mt-3 shadow">
+    <h5 class="text-center">SIGN UP</h5>
+    <input
+      type="text"
+      class="form-control my-3"
+      name="firstname"
+      [(ngModel)]="firstname"
+      placeholder="First Name"
+      #fname="ngModel"
+      required
+      [class.is-valid]="fname.valid && fname.dirty"
+      [class.is-invalid]="fname.invalid && fname.dirty"
+    />
+    <div class="text-danger" *ngIf="fname.invalid && fname.dirty">
+      firstname is required
+    </div>
+    <input
+      type="text"
+      class="form-control my-3"
+      name="lastname"
+      [(ngModel)]="lastname"
+      placeholder="Last Name"
+      #checkBox="ngModel"
+      required
+      [class.is-valid]="checkBox && checkBox.dirty"
+      [class.is-invalid]="checkBox.invalid && checkBox.dirty"
+    />
+    <div class="text-danger" *ngIf="checkBox.invalid && checkBox.dirty">
+      lastname is required
+    </div>
+    <input
+      type="text"
+      class="form-control my-3"
+      name="age"
+      [(ngModel)]="age"
+      placeholder="Age"
+      #aage="ngModel"
+    />
+    <input
+      type="text"
+      class="form-control my-3"
+      name="email"
+      [(ngModel)]="email"
+      placeholder="Email"
+      #eemail="ngModel"
+    />
+    <input
+      type="text"
+      class="form-control my-3"
+      name="password"
+      [(ngModel)]="password"
+      placeholder="Password"
+      #ppassword="ngModel"
+    />
+    <input
+      type="checkbox"
+      [(ngModel)]="acceptTerms"
+      name="acceptTerms"
+      required
+      #checkBoxs="ngModel"
+    />
+    <div class="text-danger" *ngIf="checkBoxs.invalid && checkBoxs.untouched">
+      <span *ngIf="checkBoxs ?. errors?.['required'] ">Accept all terms</span>
+    </div>
+    
+    <button
+      class="btn btn-primary w-100"
+      (click)="submitForm()"
+      type="submit"
+      [disabled]="fgroup.invalid"
+    >
+      Submit template form
+    </button>
+  </div>
+</form>

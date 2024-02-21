@@ -1,0 +1,37 @@
+<div class="container mt-5 mx-auto py-5">
+    <div class="text-center text-primary">
+        <div class="shadow-lg px-3 py-20  h-full  md:w-1/2 mx-auto ">
+            <h4 class="font-bold py-3 text-orange-400">CREATE USER</h4>
+            <div class=" mb-4">
+                <label for="firatnem" class="leading-7 text-sm text-gray-600">Firat-Name</label>
+                <input type="text" name="firstname" [(ngModel)]="firstname" placeholder="firstname" class="w-full bg-white rounded border border-orange-300 focus:border-orange-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+            <div class="relative mb-4">
+                <label for="lastname" class="leading-7 text-sm text-gray-600">Last-Name</label>
+                <input type="text" name="lastname" [(ngModel)]="lastname" placeholder="lastname" class="w-full bg-white rounded border border-orange-300 focus:border-orange-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+            <div class="relative mb-4">
+                <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                <input type="email" name="email" [(ngModel)]="email" placeholder="email" class="w-full bg-white rounded border border-orange-300 focus:border-orange-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+            <div class="relative mb-4">
+                <label for="age" class="leading-7 text-sm text-gray-600">password</label>
+                <input type="age" name="password" [(ngModel)]="age" placeholder="age" class="w-full bg-white rounded border border-orange-300 focus:border-orange-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+            <div class="relative">
+               <button (click)="createUser()" class=" text-white  bg-orange-500 border-0 py-2 px-6 w-full focus:outline-none hover:bg-orange-600 rounded text-lg">
+                   Create
+               </button>
+            </div>
+        </div>
+    </div>
+    <div class="row shadow text-center">
+        <div class="col-6 py-5" >
+         
+            <app-behaviourchild></app-behaviourchild>
+        </div>
+        <div class="col-6 text-center py-5">
+            <app-behaviourchild2></app-behaviourchild2>
+        </div>
+    </div>
+</div>

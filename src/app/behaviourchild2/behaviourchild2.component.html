@@ -1,0 +1,33 @@
+<p>behaviourchild2 works!</p>
+<div class="">
+    <div class="shadow text-primary py-3" >
+        <p class="text-primary rounded py-2"><span class="text-dark"> First-Name: </span> {{behaviour_obj.firstname}}</p>
+        <p class="text-primary rounded py-2"><span class="text-dark"> Last-Name: </span> {{behaviour_obj.lastname}}</p>
+        <p class="text-primary rounded py-2"><span class="text-dark"> Age: </span> {{behaviour_obj.age}}</p>
+        <p class="text-primary rounded py-2"><span class="text-dark"> Email:</span> {{behaviour_obj.email}}</p>
+        <div>
+            <button class="btn text-light btn-warning border-none" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">EDIT</button>
+        </div>
+    </div>
+
+  
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text"  class="form-control mt-2" [(ngModel)]="behaviour_obj.firstname" placeholder="">
+          <input type="text"  class="form-control mt-2" [(ngModel)]="behaviour_obj.lastname" placeholder="">
+          <input type="text"  class="form-control mt-2" [(ngModel)]="behaviour_obj.age" laceholder="">
+          <input type="text"  class="form-control mt-2" [(ngModel)]="behaviour_obj.email" placeholder="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="saveChanges()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

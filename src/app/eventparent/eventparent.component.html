@@ -1,0 +1,13 @@
+<div style="margin-top: 10pc;" class="container">
+    <div class="d-flex justify-content-between">
+        <div class="shadow px-3">
+            <div>{{acceptComment}}</div>
+            <input type="text" [(ngModel)]="text" class="form-control shadow" placeholder="parent text">
+            <button class="btn btn-dark w-100 mt-2" (click)="sendComment()">parent child</button>
+
+        </div>
+        <div>
+            <app-eventdhild [receivetext]="comment" (commentEmmit)="receiveComment($event)"></app-eventdhild>
+        </div>
+    </div>
+</div>
